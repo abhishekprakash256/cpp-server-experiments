@@ -9,6 +9,25 @@ compile the program with boost
 g++ -std=c++17 -o my_program my_program.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread
 
 
-
-
 g++ -std=c++17 -o websocket_server websocket_server.cpp -I/usr/local/include -L/usr/local/lib -luWS -lssl -lz
+
+
+
+cpp libray for making a chat server
+
+boost beast
+
+
+-- using the boost beast in cpp 
+
+install 
+sudo apt-get install libboost-all-dev
+
+
+-- to compile and run
+g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboost_thread -pthread
+
+
+
+
+
