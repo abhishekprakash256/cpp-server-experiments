@@ -8,9 +8,7 @@ compile the program with boost
 
 g++ -std=c++17 -o my_program my_program.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread
 
-
 g++ -std=c++17 -o websocket_server websocket_server.cpp -I/usr/local/include -L/usr/local/lib -luWS -lssl -lz
-
 
 
 cpp libray for making a chat server
@@ -40,7 +38,7 @@ compliling files in mac
 
  g++ -std=c++17 -o mac_test_boost_beast_server test_boost_beast_server.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread
 
- 
+
 
 
 

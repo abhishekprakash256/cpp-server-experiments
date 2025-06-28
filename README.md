@@ -8,7 +8,7 @@ This project provides examples and learning resources for creating WebSocket ser
 
 ### Key Features:
 
-- **WebSocket server setup**: Basic WebSocket server using `WebSocket++`.
+- **WebSocket server setup**: Basic WebSocket server using `boost beast`.
 - **Concurrency**: Handling multiple WebSocket connections simultaneously using threading.
 - **Database integration**: Storing and retrieving messages using a database (e.g., MongoDB, MySQL).
 - **Asynchronous I/O**: Using Boost.Asio for non-blocking I/O to improve server performance.
@@ -17,10 +17,10 @@ This project provides examples and learning resources for creating WebSocket ser
 
 Before running the project, make sure you have the following installed:
 
-- A C++11 or later compiler (e.g., `g++`).
-- **CMake** for building the project.
-- **WebSocket++**: A C++ library to handle WebSocket connections. Install it using your system's package manager or build from source.
-- **Boost**: For asynchronous I/O handling (optional for certain experiments).
+
+-- brew install boost, (for mac)
+-- sudo apt-get install libboost-all-dev    (for linux)
+
 
 ## How to Run
 
@@ -31,33 +31,31 @@ git clone https://github.com/abhishekprakash256/cpp-server-experiments.git
 cd cpp-server-experiments
 ```
 
-### 2. Build the project using CMake:
 
-```bash
-mkdir build
-cd build
-cmake ..
-make
-```
 
-### 3. Run the WebSocket server:
+### The compliling of the file are done seperately for OS 
 
-After building the project, you can start the WebSocket server by running:
+-- Linux file have linux_<file_name>
+-- Mac has file name as mac_<file_name>
 
-```bash
-./websocket_server
-```
 
-The server will listen for WebSocket connections on **port 9002** by default. You can modify the port in the source code if needed.
+### compiling is different for Mac and Linux 
+- g++ -std=c++17 -o <file_name> <file_name>.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread                  # for mac 
+
+- g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboost_thread -pthread        #for Linux          
+
+
+
+
+The server will listen for WebSocket connections on **port 8000** by default. You can modify the port in the source code if needed.
 
 ## Experiments
 
 This project contains various experiments to help you understand WebSocket servers in C++:
 
-1. **Basic WebSocket Server**: A simple WebSocket server that can accept connections and echo back messages to clients.
+1. **Bosst Beast**: A simple WebSocket server that can accept connections and echo back messages to clients.
 2. **Concurrency with Threading**: This experiment demonstrates how to manage multiple WebSocket connections concurrently using threads.
-3. **WebSocket with Database**: Integrating the WebSocket server with a database to store and retrieve messages.
-4. **Asynchronous I/O with Boost.Asio**: Using Boost's asynchronous I/O model to handle many connections efficiently.
+
 
 ## Database Integration
 
