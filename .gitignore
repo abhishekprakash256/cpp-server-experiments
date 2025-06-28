@@ -82,7 +82,16 @@ instance/
 .vscode/
 
 
-
 #executable files 
 executables-linux/
 executables-mac/
+
+
+#files 
+*.out
+*.exe
+*.o
+*.a
+*.so
+*.dylib
+test_boost_beast_server

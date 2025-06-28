@@ -1,5 +1,14 @@
 /*
 The code compiles and runs a WebSocket client using the Boost.Beast library.
+compiling code 
+
+g++ -std=c++17 -o mac_test_boost_beast_server test_boost_beast_server.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread   #for mac
+
+
+
+g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboost_thread -pthread         #for linux
+
+
 */
 
 #include <boost/beast/core.hpp>
@@ -9,6 +18,10 @@ The code compiles and runs a WebSocket client using the Boost.Beast library.
 #include <cstdlib>
 #include <iostream>
 #include <string>
+
+
+
+
 
 namespace beast = boost::beast;         // from <boost/beast.hpp>
 namespace http = beast::http;           // from <boost/beast/http.hpp>
