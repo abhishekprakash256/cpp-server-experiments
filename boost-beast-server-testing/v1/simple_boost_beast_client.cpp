@@ -2,7 +2,7 @@
 
 reqs boost beast library cpp 
 
-g++ -std=c++17 -o mac_simple_boost_beast_server simple_boost_beast_server.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread         #for mac
+g++ -std=c++17 -o mac_simple_boost_beast_client simple_boost_beast_client.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread         #for mac
 
 g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboost_thread -pthread         #for linux
 
@@ -17,6 +17,8 @@ g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboos
 #include <cstdlib>
 #include <iostream>
 #include <string>
+
+
 
 namespace beast = boost::beast;         // from <boost/beast.hpp>
 namespace http = beast::http;           // from <boost/beast/http.hpp>
