@@ -28,6 +28,12 @@ sudo apt-get install libboost-all-dev
 g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboost_thread -pthread
 
 
+compilation for the mac and linux -- 
+
+compile the file in two formats usig linux and mac compile in two formats using one for Linux and one for mac 
+
+-- g++ main.cpp -o myapp-macos
+-- g++ main.cpp -o myapp-linux
 
 
 Notes -- 
@@ -66,3 +72,4 @@ https://www.scaledrone.com/websockets/c++
 
 https://github.com/facundofarias/awesome-websockets?tab=readme-ov-file#c-1
 
+https://www.boost.org/doc/libs/master/libs/beast/doc/html/index.html
