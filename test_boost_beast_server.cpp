@@ -16,6 +16,8 @@ namespace websocket = beast::websocket; // from <boost/beast/websocket.hpp>
 namespace net = boost::asio;            // from <boost/asio.hpp>
 using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
+
+
 // Sends a WebSocket message and prints the response
 int main(int argc, char** argv)
 {

@@ -36,6 +36,10 @@ compile the file in two formats usig linux and mac compile in two formats using 
 -- g++ main.cpp -o myapp-linux
 
 
+
+
+
+
 Notes -- 
 
 choosing the correct c++ weboscket protocol library -- 
@@ -52,6 +56,7 @@ choosing the correct c++ weboscket protocol library --
 Using the boost beast 
 
 https://github.com/boostorg/beast
+
 
 
 
