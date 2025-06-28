@@ -60,3 +60,21 @@ This project contains various experiments to help you understand WebSocket serve
 ## Database Integration
 
 In the experiments that involve database integration, you will need to modify the code to connect to your desired database (e.g., MongoDB or MySQL). The database operations typically involve storing received messages or user data for retrieval.
+
+
+Links -- 
+
+```bash
+
+
+https://www.scaledrone.com/websockets/c++
+
+https://github.com/facundofarias/awesome-websockets?tab=readme-ov-file#c-1
+
+https://www.boost.org/doc/libs/master/libs/beast/doc/html/index.html
+
+https://medium.com/@sidhanthpandey/how-to-create-an-http-server-in-c-812cee49ff77
+
+https://www.youtube.com/watch?v=gVmwrnhkybk
+
+```
