@@ -84,5 +84,5 @@ instance/
 
 
 #executable files 
-executable_linux
-executable_mac
+executable-linux/
+executable-mac/
