@@ -30,4 +30,39 @@ g++ -o test_boost_beast_server test_boost_beast_server.cpp -lboost_system -lboos
 
 
 
+Notes -- 
+
+choosing the correct c++ weboscket protocol library -- 
+
+| Use Case                       | Recommended Stack                    |
+| ------------------------------ | ------------------------------------ |
+| Cross-platform desktop chat    | `Boost.Asio` + `Qt`                  |
+| Browser-compatible (WebSocket) | `WebSocket++` or `libwebsockets`     |
+| Embedded/IoT chat systems      | `ZeroMQ` or `libwebsockets`          |
+| Game or engine-integrated chat | `Dear ImGui` + `Boost.Asio`/`ZeroMQ` |
+| Scalable distributed backend   | `gRPC` + C++ server                  |
+
+
+Using the boost beast 
+
+https://github.com/boostorg/beast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Links -- 
+
+https://www.scaledrone.com/websockets/c++
+
+https://github.com/facundofarias/awesome-websockets?tab=readme-ov-file#c-1
 
