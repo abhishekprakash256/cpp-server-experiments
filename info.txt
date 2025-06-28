@@ -36,6 +36,13 @@ compile the file in two formats usig linux and mac compile in two formats using 
 -- g++ main.cpp -o myapp-linux
 
 
+compliling files in mac 
+
+ g++ -std=c++17 -o mac_test_boost_beast_server test_boost_beast_server.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lboost_system -lboost_thread -pthread
+
+ 
+
+
 
 
 
