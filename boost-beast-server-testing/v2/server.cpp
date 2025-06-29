@@ -6,6 +6,9 @@ mkdir build && cd build
 cmake ..
 make
 
+
+compile on both linux mac with using same commands with cmake
+
 */
 
 
