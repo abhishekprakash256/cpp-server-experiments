@@ -35,8 +35,8 @@ cd cpp-server-experiments
 
 ### The compliling of the file are done seperately for OS 
 
--- Linux file have linux_<file_name>
--- Mac has file name as mac_<file_name>
+- Linux file have linux_<file_name>
+- Mac has file name as mac_<file_name>
 
 
 ### compiling is different for Mac and Linux 
