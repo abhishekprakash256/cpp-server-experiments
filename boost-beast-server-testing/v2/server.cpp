@@ -19,14 +19,14 @@ compile on both linux mac with using same commands with cmake
 #include <iostream>
 #include <thread>
 
-namespace beast = boost::beast;
-namespace websocket = beast::websocket;
+namespace beast = boost::beast;   // namespace used for the definition of variable , :: is used for the accessing the methods
+namespace websocket = beast::websocket;   
 namespace net = boost::asio;
 using tcp = net::ip::tcp;
 
 void do_session(tcp::socket socket) {
     try {
-        websocket::stream<tcp::socket> ws{std::move(socket)};
+        websocket::stream<tcp::socket> ws{std::move(socket)};     // ws for socket,  
         ws.accept();
 
         for (;;) {
@@ -39,9 +39,10 @@ void do_session(tcp::socket socket) {
             ws.write(net::buffer("Echo: " + msg));
         }
     } catch (std::exception& e) {
-        std::cerr << "Session error: " << e.what() << "\n";
+        std::cerr << "Session error: " << e.what() << "\n";    
     }
 }
+
 
 int main() {
     try {
