@@ -29,14 +29,14 @@ void do_session(tcp::socket socket) {
         websocket::stream<tcp::socket> ws{std::move(socket)};     // ws for socket,  
         ws.accept();
 
-        for (;;) {
-            beast::flat_buffer buffer;
-            ws.read(buffer);
-            std::string msg = beast::buffers_to_string(buffer.data());
-            std::cout << "Received: " << msg << std::endl;
+        for (;;) {  // infinte loop
+            beast::flat_buffer buffer;   // temprory bufer to hold the value
+            ws.read(buffer);   //wait for the mesaage to read
+            std::string msg = beast::buffers_to_string(buffer.data());   // convert the raw data to string
+            std::cout << "Received: " << msg << std::endl;  
 
-            ws.text(ws.got_text());
-            ws.write(net::buffer("Echo: " + msg));
+            ws.text(ws.got_text());   //sends a message as text 
+            ws.write(net::buffer("Echo: " + msg));   // sends the echo client
         }
     } catch (std::exception& e) {
         std::cerr << "Session error: " << e.what() << "\n";    
@@ -46,14 +46,14 @@ void do_session(tcp::socket socket) {
 
 int main() {
     try {
-        net::io_context ioc;
-        tcp::acceptor acceptor{ioc, {tcp::v4(), 8080}};
-        std::cout << "WebSocket server running on ws://localhost:8080\n";
+        net::io_context ioc;     //event loop for boost.asio
+        tcp::acceptor acceptor{ioc, {tcp::v4(), 8080}}; // sets up the tcp acceptor litens on port 8080
+        std::cout << "WebSocket server running on ws://localhost:8080\n";  
 
         while (true) {
-            tcp::socket socket{ioc};
-            acceptor.accept(socket);
-            std::thread{do_session, std::move(socket)}.detach();
+            tcp::socket socket{ioc};  // creates a socket
+            acceptor.accept(socket);  // accepts the socket
+            std::thread{do_session, std::move(socket)}.detach(); 
         }
     } catch (std::exception& e) {
         std::cerr << "Server error: " << e.what() << "\n";
